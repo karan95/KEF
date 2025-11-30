@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+/* Ensure Tailwind utilities render last */
+@layer utilities {
+  html.dark & {
+    color-scheme: dark;
+  }
+}
+/* Smooth global transition */
+html, body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Inputs & forms fix */
+input, textarea, select {
+  transition: background-color 0.4s ease, color 0.4s ease,
+              border-color 0.4s ease;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(148 163 184); /* slate-400 */
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgb(71 85 105); /* slate-600 */
+}
+
+.dark {
+  color-scheme: dark;
+}
