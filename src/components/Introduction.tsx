@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { motion } from "motion/react";
 import { Sun, Moon, Instagram, Facebook, Mail, Phone } from "lucide-react";
+import logo from "../assets/logo_white.png";
 
 /* ------------------ Types ------------------ */
 type Testimonial = {
@@ -55,9 +56,8 @@ const Introduction: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             {/* Logo + Name */}
             <div className="flex items-center gap-3">
-              {/* Replace /logo.png with your real logo */}
               <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-500 to-emerald-400 flex items-center justify-center text-white font-bold shadow-md">
-                <img src="src/assets/logo_white.png" alt="logo" loading="lazy" width={200} />
+                <img src={logo} alt="logo" loading="lazy" style={{ maxWidth: 50 }} />
               </div>
               <div className="flex flex-col leading-tight">
                 <span className="font-semibold text-sm sm:text-base">
